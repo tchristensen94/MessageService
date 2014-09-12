@@ -11,12 +11,19 @@ package messageservice;
  * @author Timothy
  */
 public class MessageService {
+    private MessageReceiver mr;
+    private MessageSender ms;
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        System.out.println("Testing 123");
+
+    public void setMessageReceiver(MessageReceiver mr) {
+        this.mr = mr;
+    }
+    public void setMessageSender(MessageSender ms) {
+        this.ms = ms;
+    }
+
+    public void sendMessage() {
+        ms.sendMessage(mr);
     }
     
 }
