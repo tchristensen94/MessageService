@@ -5,5 +5,5 @@ package messageservice;
  */
 public interface MessageSender {
 
-    public abstract void sendMessage(String message);
+    public abstract void writeMessage(String message);
 }
