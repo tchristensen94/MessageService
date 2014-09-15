@@ -11,19 +11,19 @@ package messageservice;
  * @author Timothy
  */
 public class MessageService {
-    private MessageReceiver mr;
-    private MessageSender ms;
+    private MessageReceiver reader;
+    private MessageSender writer;
 
 
     public void setMessageReceiver(MessageReceiver mr) {
-        this.mr = mr;
+        this.reader = mr;
     }
     public void setMessageSender(MessageSender ms) {
-        this.ms = ms;
+        this.writer = ms;
     }
 
     public void sendMessage() {
-        ms.sendMessage(mr);
+        writer.sendMessage(reader.getMessage());
     }
     
 }

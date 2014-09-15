@@ -5,5 +5,5 @@ package messageservice;
  */
 public interface MessageReceiver {
 
-    public abstract void receiveMessage(String message);
+    public abstract String getMessage();
 }
